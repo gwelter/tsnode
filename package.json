@@ -1,0 +1,16 @@
+{
+  "name": "tsnode",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:gwelter/tsnode.git",
+  "author": "Guilherme André Welter <guilherme.a.welter@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "dev": "sucrase-node src/index.ts",
+    "build": ""
+  },
+  "devDependencies": {
+    "sucrase": "^3.10.1",
+    "typescript": "^3.5.2"
+  }
+}
