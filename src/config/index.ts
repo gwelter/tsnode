@@ -15,7 +15,7 @@ const baseConfig: ConfigInterface = {
   host: process.env.HTTP_HOST || '0.0.0.0'
 }
 
-let envConfig: DBConfigInterface
+let envConfig: DBConfigInterface = require('./prod').config
 
 switch (env) {
   case 'dev':

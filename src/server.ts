@@ -3,6 +3,7 @@ import { json, urlencoded } from 'body-parser'
 import cors from 'cors'
 import config from './config'
 import { connect } from './utils/db'
+import userRouter from './resources/user.router'
 
 class App {
   public express: express.Application;
@@ -20,7 +21,9 @@ class App {
   }
 
   private routes (): void {
-    this.express.get('/', (req, res): Response => {
+    this.express.use('/api/user', userRouter)
+
+    this.express.get('/api', (_req, res): Response => {
       return res.send('hello world')
     })
   }
