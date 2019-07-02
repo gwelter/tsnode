@@ -31,4 +31,4 @@ switch (env) {
     break
 }
 
-export default merge(baseConfig, envConfig) as ConfigInterface & DBConfigInterface
+export const config: ConfigInterface & DBConfigInterface = merge(baseConfig, envConfig)

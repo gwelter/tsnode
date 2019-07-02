@@ -1,9 +1,7 @@
 import { Router } from 'express'
-import { me } from './user.controllers'
+import { getOne, getMany } from './user.controllers'
 
-const router = Router()
+export const userRouter = Router()
 
-router.route('/')
-  .get(me)
-
-export default router
+userRouter.route('/').get(getMany)
+userRouter.route('/:id').get(getOne)

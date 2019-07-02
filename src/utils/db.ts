@@ -1,11 +1,9 @@
 import mongoose from 'mongoose'
-import options from '../config'
+import { config } from '../config'
 
-export const connect = (url: string = options.dbUrl, opts = {}): Promise<typeof mongoose> => {
+export const connect = (url: string = config.dbUrl, opts = {}): Promise<typeof mongoose> => {
   return mongoose.connect(
     url,
     { ...opts, useNewUrlParser: true }
   )
 }
-
-export default connect
