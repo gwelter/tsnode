@@ -16,17 +16,17 @@ export const getOne = async (req: Request, res: Response): Promise<Response | vo
   }
 }
 
-export const getMany = async (_req: Request, res: Response): Promise<void> => {
+export const getMany = async (_req: Request, res: Response): Promise<Response | void> => {
   try {
     const users = await User
       .find({})
       .lean()
       .exec()
 
-    res.status(200).json({ data: users })
+    return res.status(200).json({ data: users })
   } catch (e) {
     console.error(e)
-    res.status(400).end()
+    return res.status(400).end()
   }
 }
 
@@ -48,7 +48,6 @@ export const updateOne = async (req: Request, res: Response): Promise<Response |
         req.body,
         { new: true }
       )
-      .lean()
       .exec()
 
     if (!updatedDoc) {

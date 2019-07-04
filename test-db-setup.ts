@@ -21,9 +21,9 @@ beforeEach(async (done): Promise<void> => {
   }
 })
 afterEach((done): Promise<void> => {
-  mongoose.disconnect()
   return done()
 })
 afterAll((done): Promise<void> => {
+  mongoose.disconnect()
   return done()
 })
