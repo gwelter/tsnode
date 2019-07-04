@@ -29,8 +29,9 @@ class App {
   }
 }
 
+export const app = new App().express
+
 export const start = async (): Promise<void> => {
-  const app = new App().express
   try {
     await connect()
     app.listen(config.port, (): void => {
