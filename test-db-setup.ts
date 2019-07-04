@@ -1,5 +1,4 @@
 import mongoose from 'mongoose'
-import _ from 'lodash'
 import { connect } from './src/utils/db'
 
 beforeEach(async (done): Promise<void> => {
