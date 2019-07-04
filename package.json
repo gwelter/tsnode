@@ -6,7 +6,7 @@
   "author": "Guilherme André Welter <guilherme.a.welter@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "test": "NODE_ENV=testing jest --forceExit --detectOpenHandles  --silent",
+    "test": "NODE_ENV=testing jest --forceExit --detectOpenHandles",
     "dev": "nodemon src/index.ts",
     "build": "sucrase ./src -d ./dist --transforms typescript,imports",
     "restart": "rimraf dist && npm run build && npm start",

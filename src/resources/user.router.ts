@@ -1,15 +1,15 @@
 import { Router } from 'express'
-import { getOne, getMany, createOne, updateOne, removeOne } from './user.controllers'
+import controllers from './user.controllers'
 
 export const userRouter = Router()
 
 userRouter
   .route('/')
-  .get(getMany)
-  .post(createOne)
+  .get(controllers.getMany)
+  .post(controllers.createOne)
 
 userRouter
   .route('/:id')
-  .get(getOne)
-  .put(updateOne)
-  .delete(removeOne)
+  .get(controllers.getById)
+  .put(controllers.updateOne)
+  .delete(controllers.removeOne)
