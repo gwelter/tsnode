@@ -9,5 +9,6 @@ module.exports = {
   moduleFileExtensions: ['js', 'json', 'jsx', 'node', 'ts', 'tsx'],
   preset: 'ts-jest',
   testMatch: null,
+  testEnvironment: 'node',
   setupFilesAfterEnv: ['<rootDir>/test-db-setup.ts']
 }
