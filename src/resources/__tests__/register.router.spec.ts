@@ -1,4 +1,4 @@
-import { userRouter } from '../user.router'
+import { userRouter } from '../register.router'
 
 describe('userRouter router', (): void => {
   test('should have crud routes', (): void => {

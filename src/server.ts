@@ -3,7 +3,7 @@ import { json, urlencoded } from 'body-parser'
 import cors from 'cors'
 import { config } from './config'
 import { connect } from './utils/db'
-import { userRouter } from './resources/user.router'
+import { userRouter } from './resources/register.router'
 
 class App {
   public express: express.Application;
