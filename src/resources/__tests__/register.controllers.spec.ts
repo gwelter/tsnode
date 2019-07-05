@@ -1,6 +1,6 @@
 import request from 'supertest'
 import { app } from '../../server'
-import { User } from '../user.model'
+import { User } from '../register.model'
 
 describe('user controllers', (): void => {
   describe('getOne', (): void => {
